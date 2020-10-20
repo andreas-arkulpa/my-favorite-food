@@ -10,6 +10,7 @@ import {addData} from '../helpers/storage';
 import {useNavigation} from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 import ImagePreview from '../components/ImagePreview';
+import Input from '../components/Input';
 
 const New = () => {
   const navigation = useNavigation();
@@ -39,14 +40,18 @@ const New = () => {
       <Container scroll>
         <ScrollView style={{flex: 1}}>
           <Container>
-            {image && (
-              <ImagePreview
-                source={{
-                  uri: image,
-                }}
-              />
-            )}
+            <Input value={title} onChangeText={(text) => setTitle(text)} placeholder={'insert Title'} />
             <Spacer />
+            {image && (
+              <>
+                <ImagePreview
+                  source={{
+                    uri: image,
+                  }}
+                />
+                <Spacer />
+              </>
+            )}
             <Button label='select image' onPress={() => selectImage()} />
           </Container>
         </ScrollView>
