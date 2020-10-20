@@ -1,0 +1,27 @@
+{
+  "expo": {
+    "name": "my-favorite-food",
+    "slug": "my-favorite-food",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "splash": {
+      "backgroundColor": "#ff9100"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#ff9100",
+      "translucent": false,
+      "barStyle": "light-content"
+    },
+    "web": {
+      "favicon": "./assets/logo.png"
+    }
+  }
+}
