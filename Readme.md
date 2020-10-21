@@ -35,9 +35,9 @@ We need to change the following ones:
 - set the `backgroundColor` from `#fff` to `#ff9100`
 - add a new style for the text. set the text `color` to `#fff`
 
-## Step 4 - Status Bar [docs](https://docs.expo.io/versions/v39.0.0/sdk/status-bar/)
+## Step 4 - Status Bar
 
-we want to set the background color of the status bar to `#ff9100`:
+we want to set the background color of the status bar ([docs](https://docs.expo.io/versions/v39.0.0/sdk/status-bar)) to `#ff9100`:
 
 - install StatusBar package `expo install expo-status-bar`
 - import package`import {StatusBar} from 'expo-status-bar'`
