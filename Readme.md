@@ -1,6 +1,10 @@
 # Workshop Expo / React-Native
 
-Screenshots of the result can be found [here](https://github.com/andreas-arkulpa/my-favorite-food/tree/master/screenshots).
+Result
+
+| Home Screen                                                                                                           | Detail Screen                                                                                                           | New Screen                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/andreas-arkulpa/my-favorite-food/blob/master/screenshots/Home.png?raw=true" width="150"> | <img src="https://github.com/andreas-arkulpa/my-favorite-food/blob/master/screenshots/Detail.png?raw=true" width="150"> | <img src="https://github.com/andreas-arkulpa/my-favorite-food/blob/master/screenshots/New.png?raw=true" width="150"> |
 
 ## Step 1 - Project setup
 
