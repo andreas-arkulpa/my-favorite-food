@@ -27,9 +27,9 @@ We need to change the following ones:
 
 - `name` => `my-favorite-food` (the name of your app)
 - `slug` => `my-favorite-food` (the friendly URL name for publishing. For example, `my-favorite-food` will refer to the `expo.io/@project-owner/my-favorite-food` project)
-- `icon` => `./assets/logo.png` (app icon - [download](https://github.com/andreas-arkulpa/my-favorite-food/tree/master/assets/logo.png))
+- `icon` => `./assets/logo.png` (app icon - [download](https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/logo.png))
 - `splash.backgroundColor` => `#ff9100` (color to fill the loading screen background)
-- `web.favicon` => `./assets/logo.png` (web favicon - [download](https://github.com/andreas-arkulpa/my-favorite-food/tree/master/assets/logo.png))
+- `web.favicon` => `./assets/logo.png` (web favicon - [download](https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/logo.png))
 
 ## Step 3 - Styles
 
@@ -75,7 +75,7 @@ we want to set the background color of the status bar to `#ff9100`:
 - create file `ImagePreview.js` in the `components` folder
 - create a ImagePreview component (use Image from react-native) and assign the following styles: `width: '100%', height: 200, resizeMode: 'cover'`
 - keep in mind to handle passed `source` prop (use as source in the Image component)
-- use component with local [download](https://github.com/andreas-arkulpa/my-favorite-food/tree/master/assets/pizza.jpg) and remote (https://github.com/andreas-arkulpa/my-favorite-food/tree/master/assets/pizza.jpg) sources in App.js
+- use component with local [download](https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/pizza.jpg) and remote (https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/pizza.jpg) sources in App.js
 
 ### Button
 
