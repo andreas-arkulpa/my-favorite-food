@@ -10,7 +10,6 @@ Screenshots of the result can be found [here](https://github.com/andreas-arkulpa
 - Git
 - Visual Studio Code
 - Expo CLI: `npm install -g expo-cli`
-
 - Emulator (or Smartphone) with the Expo-Client installed (https://docs.expo.io/get-started/installation/#requirements)
 
 ### initialize Project
