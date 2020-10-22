@@ -1,4 +1,3 @@
-import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text} from 'react-native';
 import Constants from 'expo-constants';

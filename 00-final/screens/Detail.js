@@ -16,7 +16,7 @@ const Detail = (props) => {
   return (
     <Screen>
       <Header label={params.item.title} />
-      <Container scroll>
+      <Container fill>
         <ScrollView style={{flex: 1}}>
           <Container>
             {params.item.image && (

@@ -7,7 +7,7 @@ const screenStyles = StyleSheet.create({
     flexDirection: 'column',
     padding: 20,
   },
-  screenScroll: {
+  screenFill: {
     flex: 1,
     display: 'flex',
     flexDirection: 'column',
@@ -15,7 +15,7 @@ const screenStyles = StyleSheet.create({
 });
 
 const Screen = (props) => (
-  <View style={props.scroll ? screenStyles.screenScroll : screenStyles.screen}>{props.children}</View>
+  <View style={props.fill ? screenStyles.screenFill : screenStyles.screen}>{props.children}</View>
 );
 
 export default Screen;

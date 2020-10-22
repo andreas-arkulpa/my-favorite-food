@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <Screen>
       <Header label='In the mood for food?' />
-      <Container scroll>
+      <Container fill>
         {items.length > 0 && (
           <ScrollView style={{flex: 1}}>
             <Container>

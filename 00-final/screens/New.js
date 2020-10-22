@@ -37,7 +37,7 @@ const New = () => {
   return (
     <Screen>
       <Header label='What food do you like most?' />
-      <Container scroll>
+      <Container fill>
         <ScrollView style={{flex: 1}}>
           <Container>
             <Input value={title} onChangeText={(text) => setTitle(text)} placeholder={'insert Title'} />
