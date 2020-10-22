@@ -16,7 +16,7 @@
 
 ### initialize Project (5)
 
-- create a new empty repo called `my-favorite-food` on GitHub, copy the clone url and clone the project
+- create a new empty repo (without Readme.md and .gitignore file) called `my-favorite-food` on GitHub, copy the clone url and clone the project
 - `cd my-favorite-food`
 - `expo init .` (select the <b>blank</b> template in managed workflow)
 - `npm start`
