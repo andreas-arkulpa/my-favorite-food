@@ -1,10 +1,10 @@
-# Workshop Expo / React-Native
+# Workshop Expo / React-Native (144)
 
 | Home Screen                                                                                                           | Detail Screen                                                                                                           | New Screen                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/andreas-arkulpa/my-favorite-food/blob/master/screenshots/Home.png?raw=true" width="150"> | <img src="https://github.com/andreas-arkulpa/my-favorite-food/blob/master/screenshots/Detail.png?raw=true" width="150"> | <img src="https://github.com/andreas-arkulpa/my-favorite-food/blob/master/screenshots/New.png?raw=true" width="150"> |
 
-## Step 1 - Project setup
+## Step 1 - Project setup (5)
 
 ### Requirements:
 
@@ -14,14 +14,14 @@
 - Expo CLI: `npm install -g expo-cli`
 - Emulator (or Smartphone) with the Expo-Client installed (https://docs.expo.io/get-started/installation/#requirements)
 
-### initialize Project
+### initialize Project (5)
 
 - create a new empty repo called `my-favorite-food` on GitHub, copy the clone url and clone the project
 - `cd my-favorite-food`
 - `expo init .` (select the <b>blank</b> template in managed workflow)
 - `npm start`
 
-## Step 2 - Config Expo
+## Step 2 - Config Expo (4)
 
 The app.json ([docs](https://docs.expo.io/versions/v39.0.0/config/app/)) file contains configuration options for your project.<br/>
 We need to change the following ones:
@@ -32,12 +32,12 @@ We need to change the following ones:
 - `splash.backgroundColor` => `#ff9100` (color to fill the loading screen background)
 - `web.favicon` => `./assets/logo.png` (web favicon - [download](https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/logo.png))
 
-## Step 3 - Styles
+## Step 3 - Styles (3)
 
 - set the `backgroundColor` from `#fff` to `#ff9100`
 - add a new style for the text. set the text `color` to `#fff`
 
-## Step 4 - Status Bar
+## Step 4 - Status Bar (10)
 
 We want to set the background color of the status bar ([docs](https://docs.expo.io/versions/v39.0.0/sdk/status-bar)) to `#ff9100`:
 
@@ -64,7 +64,7 @@ import {StatusBar} from 'expo-status-bar';
 }
 ```
 
-## Step 5 - Refactoring to ES6 arrow functions
+## Step 5 - Refactoring to ES6 arrow functions (5)
 
 - convert code in the App.js file to an ES6 arrow function
 
@@ -82,7 +82,7 @@ const HomeScreen = () => {
 
 - create folder `components`
 
-### Text
+### Text (5)
 
 - create file `Text.js` in the `components` folder
 - create a Headline component (use Text from react-native) and assign the following styles `fontSize: 30, color: 'black'`
@@ -91,7 +91,7 @@ const HomeScreen = () => {
 - export components (multiple exports)
 - use both components in App.js
 
-### ImagePreview
+### ImagePreview (5)
 
 - create file `ImagePreview.js` in the `components` folder
 - create a ImagePreview component (use Image from react-native) and assign the following styles: `width: '100%', height: 200, resizeMode: 'cover'`
@@ -99,7 +99,7 @@ const HomeScreen = () => {
 - export component (default export)
 - use component with local [download](https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/pizza.jpg) and remote (https://github.com/andreas-arkulpa/my-favorite-food/blob/master/assets/pizza.jpg) sources in App.js
 
-### Button
+### Button (8)
 
 - create file `Button.js` in the `components` folder
 - create a Button component (use TouchableHighlight and Text from react-native) and assign the following styles.
@@ -133,7 +133,7 @@ const HomeScreen = () => {
 - export component (default export)
 - use component in App.js
 
-## Step 7 - Navigation
+## Step 7 - Navigation (13)
 
 There are multiple libraries to handle navigation in react-native. One of the most used is `react-navigation`. See the docs [here](https://reactnavigation.org/docs/getting-started)<br/>
 If you think of a website, you know that there different URLs that you can go to - some libraries call these Routes. In a mobile app you don't have URLs, but you can have different views, which we call "Screens".
@@ -202,7 +202,7 @@ const HomeScreen = () => {
 
 ## Step 8 - new components
 
-### Container
+### Container (8)
 
 - create file `Container.js` in the `components` folder
 - create a Container component (use View from react-native) and assign the following styles (depending on the passed `fill` prop).
@@ -229,7 +229,7 @@ const HomeScreen = () => {
 - make sure to pass the `children` props to the View
 - make use of the component in our Screens
 
-### Screen
+### Screen (4)
 
 - create file `Screen.js` in the `components` folder
 - create a Screen component (use View from react-native) and assign the following styles
@@ -246,7 +246,7 @@ const HomeScreen = () => {
 - make sure to pass the `children` props to the View
 - make use of the component in our Screens
 
-### Spacer
+### Spacer (4)
 
 - create file `Spacer.js` in the `components` folder
 - create a Spacer component (use View from react-native) and assign the following styles
@@ -260,7 +260,7 @@ const HomeScreen = () => {
 
 - make use of the component in our Screens
 
-### Header
+### Header (10)
 
 - create file `Header.js` in the `components` folder
 - install `expo install expo-constants` ([docs](https://docs.expo.io/versions/latest/sdk/constants/))
@@ -294,7 +294,7 @@ const Header = (props) => (
 );
 ```
 
-### FoodItem
+### FoodItem (14)
 
 - create file `FoodItem.js` in the `components` folder
 - create the following component
@@ -338,7 +338,7 @@ const FoodItem = (props) => (
 );
 ```
 
-### Input
+### Input (12)
 
 - create file `Input.js` in the `components` folder
 - create a Input component (use TextInput from react-native) and assign the following styles
@@ -356,7 +356,7 @@ const FoodItem = (props) => (
 - make sure to pass the `value`, `onChangeText` and `placeholder` props to the TextInput
 - make use of the component in our Screens
 
-## Step 9 - Async Storage
+## Step 9 - Async Storage (15)
 
 An asynchronous, unencrypted, persistent, key-value storage API.
 
@@ -415,7 +415,7 @@ export const addData = async (value) => {
 };
 ```
 
-## Step 10 - combine storage, navigation, states
+## Step 10 - combine storage, navigation, states (14)
 
 - we need to combine everything and make sure we have the following code for the different screen
 - Home Screen
