@@ -1,0 +1,13 @@
+{
+  "extends": ["expo", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-param-reassign": 0,
+    "prettier/prettier": ["error"],
+    "no-case-declarations": 0,
+    "no-await-in-loop": 0,
+    "no-bitwise": 0,
+    "no-new-wrappers": 0,
+    "react/jsx-filename-extension": [2, {"extensions": [".ts", ".tsx"]}]
+  }
+}
