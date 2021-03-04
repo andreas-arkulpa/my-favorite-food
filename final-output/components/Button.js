@@ -1,6 +1,5 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
-import {TouchableHighlight} from 'react-native-gesture-handler';
 
 const buttonStyles = StyleSheet.create({
   wrapper: {
@@ -29,13 +28,13 @@ const buttonStyles = StyleSheet.create({
 });
 
 const Button = (props) => (
-  <TouchableHighlight
+  <TouchableOpacity
     disabled={props.disabled}
     underlayColor={'#ffb95d'}
     onPress={() => props.onPress()}
     style={props.disabled ? buttonStyles.wrapperDisabled : buttonStyles.wrapper}>
     <Text style={buttonStyles.label}>{props.label}</Text>
-  </TouchableHighlight>
+  </TouchableOpacity>
 );
 
 export default Button;

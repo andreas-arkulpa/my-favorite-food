@@ -102,8 +102,8 @@ const HomeScreen = () => {
 ### Button (8)
 
 - create file `Button.js` in the `components` folder
-- create a Button component (use TouchableHighlight and Text from react-native) and assign the following styles.
-- Wrapper (TouchableHighlight) :
+- create a Button component (use TouchableOpacity and Text from react-native) and assign the following styles.
+- Wrapper (TouchableOpacity) :
 
 ```jsx
 {
@@ -301,8 +301,7 @@ const Header = (props) => (
 
 ```jsx
 import React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {StyleSheet, View, Text, Image, TouchableOpacity} from 'react-native';
 import Spacer from './Spacer';
 
 const foodItemStyles = StyleSheet.create({
