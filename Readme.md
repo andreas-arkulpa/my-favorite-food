@@ -13,17 +13,18 @@
 - Visual Studio Code
 - Expo CLI: `npm install -g expo-cli`
 - Emulator (or Smartphone) with the Expo-Client installed (https://docs.expo.io/get-started/installation/#requirements)
+- Expo-Docs: https://docs.expo.io
 
 ### initialize Project (5)
 
-- create a new empty repo (without Readme.md and .gitignore file) called `my-favorite-food` on GitHub, copy the clone url and clone the project
-- `cd my-favorite-food`
-- `expo init .` (select the <b>blank</b> template in managed workflow)
+- create a new empty repo (**without Readme.md and .gitignore file**) called `my-favorite-food-2021` on GitHub, copy the clone url and clone the project
+- `cd my-favorite-food-2021`
+- `expo init .` (don't forget the dot! select the <b>blank</b> template in managed workflow)
 - `npm start`
 
 ## Step 2 - Config Expo (4)
 
-The app.json ([docs](https://docs.expo.io/versions/v39.0.0/config/app/)) file contains configuration options for your project.<br/>
+The app.json ([docs](https://docs.expo.io/versions/v40.0.0/config/app/)) file contains configuration options for your project.<br/>
 We need to change the following ones:
 
 - `name` => `my-favorite-food` (the name of your app)
@@ -39,7 +40,7 @@ We need to change the following ones:
 
 ## Step 4 - Status Bar (10)
 
-We want to set the background color of the status bar ([docs](https://docs.expo.io/versions/v39.0.0/sdk/status-bar)) to `#ff9100`:
+We want to set the background color of the status bar ([docs](https://docs.expo.io/versions/v40.0.0/sdk/status-bar)) to `#ff9100`:
 
 - install StatusBar package `expo install expo-status-bar`
 - import package
@@ -232,7 +233,7 @@ const HomeScreen = () => {
 ### Screen (4)
 
 - create file `Screen.js` in the `components` folder
-- create a Screen component (use View from react-native) and assign the following styles
+- create a Screen component (use `View` from `react-native`) and assign the following styles
 
 ```jsx
 {
@@ -249,7 +250,7 @@ const HomeScreen = () => {
 ### Spacer (4)
 
 - create file `Spacer.js` in the `components` folder
-- create a Spacer component (use View from react-native) and assign the following styles
+- create a Spacer component (use `View` from `react-native`) and assign the following styles
 
 ```jsx
 {
@@ -263,7 +264,7 @@ const HomeScreen = () => {
 ### Header (10)
 
 - create file `Header.js` in the `components` folder
-- install `expo install expo-constants` ([docs](https://docs.expo.io/versions/latest/sdk/constants/))
+- install `expo install expo-constants` ([docs](https://docs.expo.io/versions/v40.0.0/sdk/constants/))
 - create the following component
 
 ```jsx
@@ -340,7 +341,7 @@ const FoodItem = (props) => (
 ### Input (12)
 
 - create file `Input.js` in the `components` folder
-- create a Input component (use TextInput from react-native) and assign the following styles
+- create a Input component (use `TextInput` from `react-native`) and assign the following styles
 
 ```jsx
 {
@@ -359,8 +360,8 @@ const FoodItem = (props) => (
 
 An asynchronous, unencrypted, persistent, key-value storage API.
 
-- install `expo install @react-native-community/async-storage` ([docs](https://docs.expo.io/versions/v39.0.0/sdk/async-storage/))
-- create som helper functions to store and read from Async Storage
+- install `expo install @react-native-community/async-storage` ([docs](https://docs.expo.io/versions/v40.0.0/sdk/async-storage/))
+- create some helper functions to store and read from Async Storage
 - create folder `helpers`
 - create file `storage.js` in the `helpers` Screen
 - import Async Storage
@@ -561,14 +562,14 @@ const New = () => {
             <Input value={title} onChangeText={(text) => setTitle(text)} placeholder={'insert Title'} />
             <Spacer />
             {image && (
-              <>
+              <Fragment>
                 <ImagePreview
                   source={{
                     uri: image,
                   }}
                 />
                 <Spacer />
-              </>
+              </Fragment>
             )}
             <Button label='select image' onPress={() => selectImage()} />
           </Container>
@@ -583,3 +584,5 @@ const New = () => {
 
 export default New;
 ```
+
+## Step 11 - Bonus: React-Native Web with Expo.
