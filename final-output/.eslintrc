@@ -1,5 +1,5 @@
 {
-  "extends": ["expo", "prettier"],
+  "extends": ["prettier"],
   "plugins": ["prettier"],
   "rules": {
     "no-param-reassign": 0,
