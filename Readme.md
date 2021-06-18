@@ -24,7 +24,7 @@
 
 ## Step 2 - Config Expo (4)
 
-The app.json ([docs](https://docs.expo.io/versions/v40.0.0/config/app/)) file contains configuration options for your project.<br/>
+The app.json ([docs](https://docs.expo.io/versions/latest/config/app/)) file contains configuration options for your project.<br/>
 We need to change the following ones:
 
 - `name` => `my-favorite-food` (the name of your app)
