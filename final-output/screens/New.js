@@ -18,7 +18,7 @@ const New = () => {
   const [image, setImage] = useState(null);
 
   const selectImage = async () => {
-    let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
+    let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (permissionResult.granted === false) {
       alert('Permission to access camera roll is required!');
       return;
@@ -40,7 +40,7 @@ const New = () => {
       <Container fill>
         <ScrollView style={{flex: 1}}>
           <Container>
-            <Input value={title} onChangeText={(text) => setTitle(text)} placeholder={'insert Title'} />
+            <Input value={title} onChangeText={text => setTitle(text)} placeholder={'insert Title'} />
             <Spacer />
             {image && (
               <>

@@ -40,7 +40,7 @@ We need to change the following ones:
 
 ## Step 4 - Status Bar (10)
 
-We want to set the background color of the status bar ([docs](https://docs.expo.io/versions/v40.0.0/sdk/status-bar)) to `#ff9100`:
+We want to set the background color of the status bar ([docs](https://docs.expo.io/versions/latest/sdk/status-bar/)) to `#ff9100`:
 
 - install StatusBar package `expo install expo-status-bar`
 - import package
@@ -55,12 +55,11 @@ import {StatusBar} from 'expo-status-bar';
 <StatusBar backgroundColor={'#ff9100'} translucent={true} style='light' />
 ```
 
-- On android devices the StatusBar is not correct until the expo app has been loaded. We can adjust this in the `app.json` file. Add the following optiosn:
+- On android devices the StatusBar is not correct until the expo app has been loaded. We can adjust this in the `app.json` file. Add the following options:
 
 ```javascript
 "androidStatusBar": {
     "backgroundColor": "#ff9100",
-    "translucent": false,
     "barStyle": "light-content"
 }
 ```
@@ -264,7 +263,7 @@ const HomeScreen = () => {
 ### Header (10)
 
 - create file `Header.js` in the `components` folder
-- install `expo install expo-constants` ([docs](https://docs.expo.io/versions/v40.0.0/sdk/constants/))
+- install `expo install expo-constants` ([docs](https://docs.expo.io/versions/latest/sdk/constants/))
 - create the following component
 
 ```jsx
@@ -360,14 +359,14 @@ const FoodItem = (props) => (
 
 An asynchronous, unencrypted, persistent, key-value storage API.
 
-- install `expo install @react-native-community/async-storage` ([docs](https://docs.expo.io/versions/v40.0.0/sdk/async-storage/))
+- install `expo install @react-native-async-storage/async-storage` ([docs](https://docs.expo.io/versions/latest/sdk/async-storage/))
 - create some helper functions to store and read from Async Storage
 - create folder `helpers`
 - create file `storage.js` in the `helpers` Screen
 - import Async Storage
 
 ```jsx
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 ```
 
 - define a storage key for the key-value pair
@@ -537,7 +536,7 @@ const New = () => {
   const [image, setImage] = useState(null);
 
   const selectImage = async () => {
-    let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
+    let permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (permissionResult.granted === false) {
       alert('Permission to access camera roll is required!');
       return;

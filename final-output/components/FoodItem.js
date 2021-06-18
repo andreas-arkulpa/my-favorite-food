@@ -19,7 +19,7 @@ const foodItemStyles = StyleSheet.create({
   title: {fontSize: 20, color: 'black', textAlign: 'left'},
 });
 
-const FoodItem = (props) => (
+const FoodItem = props => (
   <TouchableOpacity onPress={() => props.onPress()}>
     <View style={foodItemStyles.wrapper}>
       <Image

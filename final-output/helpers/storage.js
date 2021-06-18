@@ -1,8 +1,8 @@
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const STORAGE_KEY = '@my-favorite-food/items';
 
-export const storeData = async (value) => {
+export const storeData = async value => {
   try {
     const json = JSON.stringify(value);
     await AsyncStorage.setItem(STORAGE_KEY, json);
@@ -21,7 +21,7 @@ export const getData = async () => {
   }
 };
 
-export const addData = async (value) => {
+export const addData = async value => {
   let data = [];
   const existing = await getData();
   if (existing) data = [...existing];

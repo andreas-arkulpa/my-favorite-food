@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {Fragment} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator, TransitionSpecs} from '@react-navigation/stack';
 import Home from './screens/Home';
@@ -17,8 +17,8 @@ const forFade = ({current}) => ({
 
 const App = () => {
   return (
-    <>
-      <StatusBar backgroundColor={'#ff9100'} translucent={true} style='light' />
+    <Fragment>
+      <StatusBar backgroundColor={'#ff9100'} style='light' />
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName='Home'
@@ -31,7 +31,7 @@ const App = () => {
           <Stack.Screen name='New' component={New} />
         </Stack.Navigator>
       </NavigationContainer>
-    </>
+    </Fragment>
   );
 };
 
