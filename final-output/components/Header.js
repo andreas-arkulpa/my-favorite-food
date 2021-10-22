@@ -16,7 +16,7 @@ const headerStyles = StyleSheet.create({
   label: {fontSize: 25, color: 'white', fontWeight: 'bold', textAlign: 'center'},
 });
 
-const Header = (props) => (
+const Header = props => (
   <SafeAreaView style={headerStyles.safeAreaView}>
     <View style={headerStyles.wrapper}>
       <Text style={headerStyles.label}>{props.label}</Text>

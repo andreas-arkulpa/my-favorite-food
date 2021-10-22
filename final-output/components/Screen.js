@@ -10,6 +10,6 @@ const screenStyles = StyleSheet.create({
   },
 });
 
-const Screen = (props) => <View style={screenStyles.screen}>{props.children}</View>;
+const Screen = props => <View style={screenStyles.screen}>{props.children}</View>;
 
 export default Screen;

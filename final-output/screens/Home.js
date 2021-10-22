@@ -3,18 +3,19 @@ import Button from '../components/Button';
 import Screen from '../components/Screen';
 import Spacer from '../components/Spacer';
 import {Headline, Paragraph} from '../components/Text';
-import Header from '../components/Header';
+import Header from '../components/Header.tailwind';
 import Container from '../components/Container';
 import FoodItem from '../components/FoodItem';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {getData} from '../helpers/storage';
-import {ScrollView} from 'react-native';
+import {ScrollView, Text} from 'react-native';
+import tailwind from '../helpers/tailwind';
 
 const Home = () => {
   const navigation = useNavigation();
   const [items, setItems] = useState([]);
   useFocusEffect(() => {
-    getData().then((data) => {
+    getData().then(data => {
       if (data) setItems(data);
     });
   });

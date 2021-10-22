@@ -10,7 +10,7 @@ import {addData} from '../helpers/storage';
 import {useNavigation} from '@react-navigation/native';
 import ImagePreview from '../components/ImagePreview';
 
-const Detail = (props) => {
+const Detail = props => {
   const navigation = useNavigation();
   const {params} = props.route;
   return (

@@ -14,7 +14,7 @@ const screenStyles = StyleSheet.create({
   },
 });
 
-const Screen = (props) => (
+const Screen = props => (
   <View style={props.fill ? screenStyles.screenFill : screenStyles.screen}>{props.children}</View>
 );
 

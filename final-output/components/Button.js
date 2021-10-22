@@ -27,7 +27,7 @@ const buttonStyles = StyleSheet.create({
   },
 });
 
-const Button = (props) => (
+const Button = props => (
   <TouchableOpacity
     disabled={props.disabled}
     underlayColor={'#ffb95d'}

@@ -6,6 +6,6 @@ const textStyles = StyleSheet.create({
   paragraph: {fontSize: 16, color: 'black'},
 });
 
-export const Headline = (props) => <Text style={textStyles.headline}>{props.children}</Text>;
+export const Headline = props => <Text style={textStyles.headline}>{props.children}</Text>;
 
-export const Paragraph = (props) => <Text style={textStyles.paragraph}>{props.children}</Text>;
+export const Paragraph = props => <Text style={textStyles.paragraph}>{props.children}</Text>;

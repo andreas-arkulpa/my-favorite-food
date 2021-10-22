@@ -586,6 +586,70 @@ export default New;
 
 ## Step 11 - Bonus: React-Native Web with Expo.
 
+## Step 12 - Bonus: React-Native with tailwindcss ([docs](https://github.com/jaredh159/tailwind-react-native-classnames/))
+
+- we need to add an empty tailwind config to our project - `tailwind.config.js`
+
+```jsx
+module.exports = {
+  theme: {
+    extend: {},
+  },
+};
+```
+
+- we need to add a new script to package.json ()
+
+```jsx
+"tailwind-codegen": "npx trnc-create-styles"
+```
+
+- install vs-code extension: [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+
+- adjust vs-code settings and add the following entry:
+
+```JSON
+"tailwindCSS.experimental.classRegex": [
+  [
+    "tailwind\\(([^)]*)\\)",
+    "[\"'`]([^\"'`]*).*?[\"'`]"
+  ]
+],
+```
+
+- install `tailwind-react-native-classnames` node-module with the follwing command `npm i tailwind-react-native-classnames`
+
+- run the command: `npm run tailwind-codegen`
+
+- add new file called `tailwind.js` to the helpers folder:
+
+```jsx
+import {create} from 'tailwind-react-native-classnames';
+
+import styles from '../tw-rn-styles.json'; // <-- your path may differ
+
+// this function works just like the default package export
+// except it is customized according to your `tailwind.config.js`
+const tailwind = create(styles).style;
+
+export default tailwind;
+```
+
+- basic usage:
+
+```jsx
+import tailwind from '../helpers/tailwind';
+
+const Header = (props) => (
+  <SafeAreaView style={tailwind('bg-orange rounded-b-3xl')}>
+    <View style={tailwind('px-5 pb-10', {paddingTop: Constants.statusBarHeight + 30})}>
+      <Text style={tailwind('text-white font-bold text-center text-2xl')}>{props.label}</Text>
+    </View>
+  </SafeAreaView>
+);
+```
+
 ## Links:
 
 - https://callstack.github.io/react-native-paper/
+- https://github.com/jaredh159/tailwind-react-native-classnames
