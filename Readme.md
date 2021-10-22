@@ -19,7 +19,7 @@
 
 - create a new empty repo (**without Readme.md and .gitignore file**) called `my-favorite-food-2021` on GitHub, copy the clone url and clone the project
 - `cd my-favorite-food-2021`
-- `expo init . --npm true` (don't forget the dot! select the <b>blank</b> template in managed workflow)
+- `expo init .` (don't forget the dot! select the <b>blank</b> template in managed workflow)
 - `npm start`
 
 ## Step 2 - Config Expo (4)
