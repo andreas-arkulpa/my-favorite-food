@@ -598,7 +598,7 @@ module.exports = {
 };
 ```
 
-- we need to add a new script to package.json ()
+- we need to add a new script to package.json
 
 ```jsx
 "tailwind-codegen": "npx trnc-create-styles"
